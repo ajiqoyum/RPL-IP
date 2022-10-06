@@ -41,4 +41,12 @@ class HomeController extends Controller
   {
     return view('home.show', compact('bus'));
   }
+  public function test()
+  {
+    return view('home.test');
+  }
+  public function hasil()
+  {
+    return view('home.hasil');
+  }
 }

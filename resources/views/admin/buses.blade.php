@@ -3,15 +3,15 @@
 @section('content')
 <div class="container-fluid">
   <!-- Page Heading -->
-  <h1 class="h3 mb-2 text-gray-800">Buses</h1>
-  <p class="mb-4">List of all the busses available in our company.</p>
+  <h1 class="h3 mb-2 text-gray-800">Doctors</h1>
+  <p class="mb-4">List of all the Doctors available in our company.</p>
 
-  <a href="{{route('bus.create')}}" class="btn btn-primary mb-4">Add A New Bus</a>
+  <a href="{{route('bus.create')}}" class="btn btn-primary mb-4">Add A New Doctor</a>
 
   <!-- DataTales Example -->
   <div class="card shadow mb-4">
     <div class="card-header py-3">
-      <h6 class="m-0 font-weight-bold text-primary">Buses Datatable</h6>
+      <h6 class="m-0 font-weight-bold text-primary">Doctors Datatable</h6>
     </div>
     <div class="card-body">
       <div class="table-responsive">
@@ -20,8 +20,8 @@
             <tr>
               <th>Id</th>
               <th>Name</th>
-              <th>from</th>
-              <th>to</th>
+              <th>City</th>
+              <th>Hospital</th>
               <th>status</th>
               <th>created_at</th>
               <th>actions</th>
@@ -31,8 +31,8 @@
             <tr>
               <th>Id</th>
               <th>Name</th>
-              <th>from</th>
-              <th>to</th>
+              <th>City</th>
+              <th>Hospital</th>
               <th>status</th>
               <th>created_at</th>
               <th>actions</th>

@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name')?? 'Bus reservation' }}</title>
+    <title>{{ config('app.name')?? 'Inner Peace' }}</title>
 
     {{-- <link rel="shortcut icon" type="image/png" href="{{asset('images/logo/joblister.png')}}" /> --}}
     <!-- Fonts -->

@@ -11,6 +11,8 @@ use App\Http\Controllers\ChatController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('home.index');
+Route::get('/test', [HomeController::class, 'test'])->name('home.test');
+Route::get('/test/hasil', [HomeController::class, 'hasil'])->name('home.hasil');
 Route::get('/bus/search', [HomeController::class, 'search'])->name('home.search');
 Route::get('/bus/{bus}', [HomeController::class, 'show'])->name('home.show');
 

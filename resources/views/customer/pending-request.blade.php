@@ -20,7 +20,7 @@
               <th>Name</th>
               <th>Customer Name</th>
               <th>Customer Email</th>
-              <th>Passengers</th>
+              <th>Patients</th>
               <th>Pending</th>
               <th>Rejected</th>
               <th>created_at</th>

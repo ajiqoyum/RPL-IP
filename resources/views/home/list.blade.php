@@ -15,7 +15,7 @@
                 <input type="text" name="q" value="{{Request::get('q')}}" class="form-control" placeholder="Search By Name" />
                 <span class="input-group-append">
                   <button type="submit" class="btn btn-primary pt-1">
-                    <span class="fas fa-search"></span> Search Bus 
+                    <span class="fas fa-search"></span> Search Doctor 
                   </button>
                 </span>
               </div>
@@ -33,14 +33,14 @@
         <div class="card-body p-3">
           <div class="d-flex align-items-center small mb-0">
             <i class="fas fa-search mr-1"></i>
-            <strong>Refine Your Bus search</strong>
+            <strong>Refine Your Consultation search</strong>
           </div>
         </div>
       </div>
       <div class="card border-top-0">
         <div class="card-body p-3" id="jobCategories">
           <div class="pb-0">
-            <div class="card-title mb-1">Bus Arrival days</div>
+            <div class="card-title mb-1">Available days</div>
             <div class="card-body p-0">
               <div class="form-group">
                 <form action="{{route('home.search')}}" method="Get" id="arrivalDaysForm">
@@ -68,7 +68,7 @@
       <div class="card border-top-0">
         <div class="card-body p-3" id="jobCategories">
           <div class="pb-0">
-            <div class="card-title mb-1">Bus Arrival location</div>
+            <div class="card-title mb-1">location</div>
             <div class="card-body p-0">
               <div class="form-group">
                 <form action="{{route('home.search')}}" method="Get" id="arrivalLocationForm">
@@ -102,7 +102,7 @@
           <div class="bg-white p-3 shadow mb-3">
             <div class="row">
               <div class="col-sm-6 col-md-4 col-lg-3 mx-auto mb-sm-4">
-                <img src="{{asset($bus->img)}}" class="img-fluid" alt="Bus img">
+                <img src="{{asset('images/bus/1.png')}}" class="img-fluid" alt="Dr img">
               </div>
               <div class="col-sm-12 col-md-7 ">
                 <h5 class="secondary-link font-weight-bold">
@@ -111,34 +111,34 @@
                   </a>
                 </h5>
                 <h6 class="mt-2">
-                  Bus code : {{$bus->bus_code}}
+                  Service Type : {{$bus->bus_code}}
                 </h6>
     
                 <div class="small my-1 d-flex">
                   <div class="mr-4">
-                    <span>from: </span>
+                    <span>Location: </span>
                     <span class="text-primary">{{$bus->from}}</span>
                   </div>
                   <div>
-                    <span>to: </span>
+                    <span>Service: </span>
                     <span class="text-primary">{{$bus->to}}</span>
                   </div>
                 </div>
 
                 <div class="small my-1 d-flex">
                   <div class="mr-4">
-                    <span>Arrival time: </span>
+                    <span>Available time: </span>
                     <span class="text-primary">{{$bus->arrival_time}}</span>
                   </div>
                   <div>
-                    <span>Arrival days: </span>
+                    <span>Available days: </span>
                     <span class="text-primary">{{$bus->arrival_days}}</span>
                   </div>
                 </div>
               </div>
               <div class="col-sm-12 col-md-2">
                 <div class="">
-                  <p class="h5 text-primary">${{number_format($bus->fare)}}</p>
+                  <p class="h5 text-primary">Rp.{{number_format($bus->fare)}}.000</p>
                 </div>
               </div>
             </div>

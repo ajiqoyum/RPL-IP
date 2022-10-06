@@ -3,7 +3,7 @@
 
   <!-- Sidebar - Brand -->
   <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{route('home.index')}}">
-    <div class="sidebar-brand-text mx-2">Bus Reservation</div>
+    <div class="sidebar-brand-text mx-2">Inner Peace</div>
   </a>
 
   <!-- Divider -->
@@ -22,6 +22,12 @@
       <i class="fas fa-fw fa-h-square"></i>
       <span>Home</span></a>
   </li>
+
+  <li class="nav-item {{ request()->segment(2) == 'test' ? 'active': ''}}">
+    <a class="nav-link" href="{{route('home.test')}}">
+      <i class="fas fa-fw fa-cloud"></i>
+      <span>Test</span></a>
+  </li>
   
   <!-- Divider -->
   <hr class="sidebar-divider">
@@ -35,14 +41,14 @@
   <!-- Nav Item - Pages Collapse Menu -->
   <li class="nav-item">
     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-      <i class="fas fa-fw fa-bus-alt"></i>
-      <span>Buses</span>
+      <i class="fas fa-fw fa-stethoscope"></i>
+      <span>Service</span>
     </a>
     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
       <div class="bg-white py-2 collapse-inner rounded">
-        <h6 class="collapse-header">Bus Bread:</h6>
-        <a class="collapse-item" href="{{route('admin.buses')}}">All Buses</a>
-        <a class="collapse-item" href="{{route('bus.create')}}">Add a new bus</a>
+        <h6 class="collapse-header">Lanjut:</h6>
+        <a class="collapse-item" href="{{route('admin.buses')}}">All Doctors  </a>
+        <a class="collapse-item" href="{{route('bus.create')}}">Add a new doctor</a>
       </div>
     </div>
   </li>
@@ -64,20 +70,20 @@
   @endrole
 
   <div class="sidebar-heading">
-    Bus information
+    Services information
   </div>
 
   <li class="nav-item {{ request()->segment(2) == 'search' ? 'active': ''}}">
     <a class="nav-link" href="{{route('home.search')}}">
-      <i class="fas fa-fw fa-bus-alt"></i>
-      <span>Bus list</span></a>
+      <i class="fas fa-fw fa-stethoscope"></i>
+      <span>Doctor list</span></a>
   </li>
 
-   <li class="nav-item {{ request()->segment(1) == 'chats' ? 'active': ''}}">
+   <!-- <li class="nav-item {{ request()->segment(1) == 'chats' ? 'active': ''}}">
     <a class="nav-link" href="{{route('chat.index')}}">
       <i class="fas fa-fw fa-bus-alt"></i>
       <span>My chats</span></a>
-  </li>
+  </li> -->
   
   @role('user')
   <li class="nav-item {{ request()->segment(1) == 'my-reservatins' ? 'active': ''}}">

@@ -4,9 +4,9 @@
 <div class="container-fluid">
 
   <h1 class="h3 mb-0 text-gray-800">Home </h1>
-  <p>Search available buses here.</p>
+  <!-- <p>Search available buses here.</p> -->
 
-  <div class="row align-items-center">
+  <!-- <div class="row align-items-center">
 
     <div class="col-xl-6 col-md-12 mb-4 small">
       <div class="card border-left-primary shadow h-100 py-2">
@@ -50,12 +50,12 @@
           </form>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <!-- Earnings (Monthly) Card Example -->
     <div class="col-xl-6 col-md-12 mb-4">
       <div class="w-50 mx-auto">
-        <img src="{{asset('images/yatch.svg')}}" class="img-fluid" alt="">        
+        <img src="{{asset('images/mental.png')}}" class="img-fluid" alt="">        
       </div>
     </div>
 
@@ -63,24 +63,24 @@
 
   <hr class="line-divider">
 
-  <h1 class="h3 mb-0 text-gray-800">Explore our latest commutes.</h1>
+  <h1 class="h3 mb-0 text-gray-800">Explore</h1>
   <br>
 
   <div class="row">
     @foreach($buses as $bus)
     <div class="col-sm-6 col-md-3">
       <div class="card text-center shadow h-100">
-        <img src="{{asset($bus->img)}}" class="img-fluid" alt="Bus img">
+        <img src="{{asset('images/bus/1.png')}}" class="img-fluid" alt="Dr img">
         <div class="card-body">
           <p class="card-header">{{$bus->name}}</p>
 
          <div class="d-flex flex-column justify-content-center"> 
            <p class="text-primary">{{$bus->from}}</p>
-           <i class="fas fa-angle-double-down"></i>
+           <!-- <i class="fas fa-angle-double-down"></i> -->
            <p class="text-primary">{{$bus->to}}</p>
         </div>
 
-          <a href="{{route('home.show',['bus'=>$bus])}}" class="btn btn-primary">Buy tickets</a>
+          <a href="{{route('home.show',['bus'=>$bus])}}" class="btn btn-primary">Set for Consultation</a>
         </div>
       </div>
     </div>

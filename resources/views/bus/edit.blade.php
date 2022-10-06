@@ -12,7 +12,7 @@
       <div class="col-lg-6">
         <div class="card shadow mb-4">
           <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Enter the bus details</h6>
+            <h6 class="m-0 font-weight-bold text-primary">Enter Doctor details</h6>
           </div>
           <div class="card-body">
             @if($errors->any())
@@ -21,7 +21,7 @@
               </div>
             @endif
               <div class="form-group">
-                <label for="">Name of the bus</label>
+                <label for="">Name</label>
                 <input type="text" value="{{$bus->name}}" class="form-control form-control-user" @error('name') is-invalid @enderror  name="name" placeholder="Enter name ..." required  autocomplete="name" autofocus>
                   @error('name')
                     <span class="invalid-feedback" role="alert">
@@ -31,7 +31,7 @@
               </div>
 
               <div class="form-group">
-                <label for="">Bus code or bus number</label>
+                <label for="">Services Type</label>
                 <input type="text"  value="{{$bus->bus_code}}" class="form-control form-control-user" @error('bus_code') is-invalid @enderror  name="bus_code" placeholder="Bus code ..." required >
                 @error('bus_code')
                   <span class="invalid-feedback" role="alert">
@@ -41,7 +41,7 @@
               </div>
 
               <div class="form-group">
-                <label for="">Arrival location</label>
+                <label for="">City</label>
                 <input type="text"  value="{{$bus->from}}" class="form-control form-control-user" @error('from') is-invalid @enderror  name="from" placeholder="Arival location" required  >
                 @error('from')
                   <span class="invalid-feedback" role="alert">
@@ -51,7 +51,7 @@
               </div>
 
               <div class="form-group">
-                <label for="">Destination</label>
+                <label for="">Hospital</label>
                 <input type="text"  value="{{$bus->to}}" class="form-control form-control-user" @error('to') is-invalid @enderror  name="to" placeholder="Destination" required  >
                   @error('to')
                     <span class="invalid-feedback" role="alert">
@@ -61,7 +61,7 @@
               </div>
 
               <div class="form-group">
-                <label for="">Arrival days</label>
+                <label for="">Available days</label>
                 <select value="{{$bus->arrival_days}}" name="arrival_days" class="form-control form-control-user" @error('arrival_days') is-invalid @enderror  placeholder="Arrival days" required >
                   <option value="Everyday">Everyday</option>
                   <option value="Sunday">Sunday</option>
@@ -77,7 +77,7 @@
               </div>
 
             <div class="form-group">
-              <label for="">Arrival time</label>
+              <label for="">Available time</label>
               <input value="{{$bus->arrival_time}}" type="time" class="form-control form-control-user" @error('arrival_time') is-invalid @enderror  name="arrival_time" placeholder="Arrival time" required  >
               @error('arrival_time')
                 <span class="invalid-feedback" role="alert">
@@ -92,7 +92,7 @@
           <div class="card-body">
             <p class="text-primary">Additional details</p>
               <div class="form-group">
-                <label for="">Driver name</label>
+                <label for="">Hospital name</label>
                 <input type="text" value="{{$bus->driver_name}}" class="form-control form-control-user" @error('driver_name') is-invalid @enderror  name="driver_name" placeholder="Driver name" required  >
                 @error('driver_name')
                   <span class="invalid-feedback" role="alert">
@@ -102,7 +102,7 @@
               </div>
 
               <div class="form-group">
-                <label for="">Fare</label>
+                <label for="">Price</label>
                 <input type="text"  value="{{$bus->fare}}" class="form-control form-control-user" @error('fare') is-invalid @enderror  name="fare" placeholder="fare/price" required  >
                 @error('fare')
                   <span class="invalid-feedback" role="alert">
@@ -112,7 +112,7 @@
               </div>
 
               <div class="form-group">
-                <label for="">No of Seats</label>
+                <label for="">Number of patients</label>
                 <input type="number"  value="{{$bus->seats}}" class="form-control form-control-user" @error('seats') is-invalid @enderror  name="seats" placeholder="No of seats" required  >
                 @error('seats')
                   <span class="invalid-feedback" role="alert">
@@ -136,7 +136,7 @@
               <form action="{{route('bus.destroy',['id'=>$bus])}}" method="post" class="right">
                 @csrf
                 @method('delete')
-                <button class="btn btn-danger" type="submit">Delete Bus</button>
+                <button class="btn btn-danger" type="submit">Delete</button>
               </form>
             </div>
 
@@ -147,18 +147,18 @@
       <div class="col-lg-6">
         <div class="card shadow mb-4">
           <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Enter the bus media</h6>
+            <h6 class="m-0 font-weight-bold text-primary">Enter Photo</h6>
           </div>
           <div class="card-body">
             <div class="form-group">
-              <label for="exampleFormControlFile1">Bus Image</label>
+              <label for="exampleFormControlFile1">Image</label>
               <input type="file" class="form-control-file" id="exampleFormControlFile1">
             </div>
 
-            <div class="mt-4">
-              <p>Bus media</p>
+            <!-- <div class="mt-4">
+              <p>Photo</p>
               <img src="{{asset($bus->img)}}" class="img-fluid" alt="Bus Image">
-            </div>
+            </div> -->
 
           </div>
         </div>

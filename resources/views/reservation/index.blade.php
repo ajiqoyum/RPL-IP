@@ -4,7 +4,7 @@
 <div class="container-fluid">
   <!-- Page Heading -->
   <h1 class="h3 mb-2 text-gray-800">My reservations</h1>
-  <p class="mb-4">List of all the busses reservations.</p>
+  <p class="mb-4">List of all the Consultation reservations.</p>
 
   <a href="{{route('home.search')}}" class="btn btn-primary mb-4">Make A reservation</a>
 
@@ -19,9 +19,9 @@
           <thead>
             <tr>
               <th>Id</th>
-              <th>Bus Name</th>
-              <th>From</th>
-              <th>To</th>
+              <th>Doctor Name</th>
+              <th>City</th>
+              <th>Service</th>
               <th>Pending</th>
               <th>Rejected</th>
               <th>Created_at</th>

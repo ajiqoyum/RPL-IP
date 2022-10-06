@@ -76,13 +76,13 @@
   </li>
 
   <!-- Nav Item - Messages -->
-  <li class="nav-item dropdown no-arrow mx-1">
+  <!-- <li class="nav-item dropdown no-arrow mx-1">
     <a class="nav-link" href="{{route('chat.index')}}" role="button" >
-      <i class="fas fa-envelope fa-fw"></i>
+      <i class="fas fa-envelope fa-fw"></i> -->
       <!-- Counter - Messages -->
-      <span class="badge badge-danger badge-counter">+</span>
+      <!-- <span class="badge badge-danger badge-counter">+</span>
     </a>
-  </li>
+  </li> -->
 
   <div class="topbar-divider d-none d-sm-block"></div>
 
